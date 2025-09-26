@@ -181,13 +181,12 @@ export default function Index() {
       {/* Events */}
       <section
         id="events"
-        className="relative scroll-mt-24 bg-fixed bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url(https://images.pexels.com/photos/296888/pexels-photo-296888.jpeg?auto=compress&cs=tinysrgb&w=1600)",
-        }}
+        className="relative scroll-mt-24 overflow-hidden"
       >
-        <div className="absolute inset-0 bg-coffee/80" />
+        <BackgroundVideo
+          src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F360a8da40802430683a50a5098a5b877?alt=media&token=86bdc659-127d-494a-877e-f5431f943e1e&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
+          overlayClassName="bg-coffee/75"
+        />
         <div className="relative container py-24">
           <h2 className="font-display text-3xl md:text-4xl text-cream inline-block relative after:absolute after:left-0 after:-bottom-2 after:h-1 after:w-24 after:bg-gold">
             Events
