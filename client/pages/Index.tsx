@@ -171,7 +171,6 @@ export default function Index() {
                   <h3 className="font-display text-xl">{p.name}</h3>
                   <p className="text-cream/90">{p.desc}</p>
                 </div>
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-black/5" />
               </article>
             ))}
           </div>
