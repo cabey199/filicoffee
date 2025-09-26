@@ -3,6 +3,7 @@ export default function Footer() {
     <footer className="bg-coffee text-cream mt-24">
       <div className="container py-12 grid gap-8 md:grid-cols-3">
         <div>
+          <img src="https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fbc479adbfa694305a6c9aa9305a359ed?format=webp&width=200" alt="Fili Coffee logo" className="h-10 w-auto mb-3" />
           <h3 className="font-display text-xl">Fili Coffee Roasting</h3>
           <p className="mt-2 text-cream/80">Addis Ababa, Ethiopia</p>
           <p className="mt-1 text-cream/80">Email: hello@filicoffee.et</p>
