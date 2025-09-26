@@ -141,7 +141,7 @@ export default function Index() {
       </section>
 
       {/* Coffee */}
-      <section id="coffee" className="relative bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.04),transparent_60%)]">
+      <section id="coffee" className="relative scroll-mt-24 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.04),transparent_60%)]">
         <div className="container py-24">
           <h2
             ref={coffeeRef}
