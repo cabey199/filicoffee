@@ -101,8 +101,11 @@ export default function Index() {
       </section>
 
       {/* About */}
-      <section id="about" className="relative scroll-mt-24">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-coffee to-beige" />
+      <section id="about" className="relative scroll-mt-24 overflow-hidden">
+        <BackgroundVideo
+          src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F5ccb2e05f5f44cb8a0bcbe251738d880?alt=media&token=99dc65ac-9e9e-440f-b0eb-bc6460b11694&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
+          overlayClassName="bg-gradient-to-r from-coffee/90 to-beige/60"
+        />
         <div className="container py-24">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div
