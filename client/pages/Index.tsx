@@ -80,6 +80,7 @@ export default function Index() {
         <BackgroundVideo
           src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fadbbad204a764387a7626ba5f317afcb?alt=media&token=fb0f550d-511a-4304-96a0-0cd5fe31d549&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
           overlayClassName="bg-gradient-to-b from-black/55 via-black/30 to-black/60"
+          playbackRate={0.85}
         />
         <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
           <div
@@ -109,8 +110,14 @@ export default function Index() {
       {/* About */}
       <section id="about" className="relative scroll-mt-24 overflow-hidden">
         <BackgroundVideo
-          src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F5ccb2e05f5f44cb8a0bcbe251738d880?alt=media&token=99dc65ac-9e9e-440f-b0eb-bc6460b11694&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
+          src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F6ddb2ef00e9e42df90091b99198440b1?alt=media&token=ac6ddb7b-9acb-430c-a68d-dca611d425e2&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
           overlayClassName="bg-gradient-to-r from-coffee/90 to-beige/60"
+          playbackRate={0.85}
+        />
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fbc479adbfa694305a6c9aa9305a359ed?format=webp&width=800"
+          alt="Fili Coffee watermark logo"
+          className="pointer-events-none select-none absolute inset-0 mx-auto my-auto opacity-10 mix-blend-screen w-[320px] md:w-[420px]"
         />
         <div className="container py-24">
           <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -148,6 +155,7 @@ export default function Index() {
         <BackgroundVideo
           src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fc35129a95db8461694ede0f115c94321?alt=media&token=b98aad85-07a5-46d6-9474-b0e64fa89a6a&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
           overlayClassName="bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.35),transparent_65%)]"
+          playbackRate={0.85}
         />
         <div className="container py-24">
           <h2
@@ -192,6 +200,7 @@ export default function Index() {
         <BackgroundVideo
           src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F360a8da40802430683a50a5098a5b877?alt=media&token=86bdc659-127d-494a-877e-f5431f943e1e&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
           overlayClassName="bg-coffee/75"
+          playbackRate={0.85}
         />
         <div className="relative container py-24">
           <h2 className="font-display text-3xl md:text-4xl text-cream inline-block relative after:absolute after:left-0 after:-bottom-2 after:h-1 after:w-24 after:bg-gold">
@@ -242,6 +251,7 @@ export default function Index() {
         <BackgroundVideo
           src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F680ccddc16464f87922867c366689d79?alt=media&token=65d3b60c-72e5-4cb4-b7f8-bdd6e087d887&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
           overlayClassName="bg-black/30"
+          playbackRate={0.85}
         />
         <div className="container py-24">
           <h2 className="font-display text-3xl md:text-4xl text-coffee inline-block relative after:absolute after:left-0 after:-bottom-2 after:h-1 after:w-24 after:bg-gold">
