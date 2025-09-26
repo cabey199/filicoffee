@@ -181,7 +181,7 @@ export default function Index() {
       {/* Events */}
       <section
         id="events"
-        className="relative bg-fixed bg-cover bg-center"
+        className="relative scroll-mt-24 bg-fixed bg-cover bg-center"
         style={{
           backgroundImage:
             "url(https://images.pexels.com/photos/296888/pexels-photo-296888.jpeg?auto=compress&cs=tinysrgb&w=1600)",
