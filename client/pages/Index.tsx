@@ -264,7 +264,7 @@ export default function Index() {
             <img
               src={lightbox}
               alt="Full size"
-              className="max-h-[85vh] w-auto rounded-xl shadow-2xl animate-[zoomIn_300ms_ease]"
+              className="max-h-[85vh] w-auto rounded-xl shadow-2xl animate-zoomIn"
             />
           </div>
         )}
