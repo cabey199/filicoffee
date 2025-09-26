@@ -233,7 +233,7 @@ export default function Index() {
       </section>
 
       {/* Gallery */}
-      <section id="gallery" className="relative">
+      <section id="gallery" className="relative scroll-mt-24">
         <div className="container py-24">
           <h2 className="font-display text-3xl md:text-4xl text-coffee inline-block relative after:absolute after:left-0 after:-bottom-2 after:h-1 after:w-24 after:bg-gold">
             Gallery
