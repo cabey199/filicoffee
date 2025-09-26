@@ -232,7 +232,11 @@ export default function Index() {
       </section>
 
       {/* Gallery */}
-      <section id="gallery" className="relative scroll-mt-24">
+      <section id="gallery" className="relative scroll-mt-24 overflow-hidden">
+        <BackgroundVideo
+          src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F680ccddc16464f87922867c366689d79?alt=media&token=65d3b60c-72e5-4cb4-b7f8-bdd6e087d887&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
+          overlayClassName="bg-black/30"
+        />
         <div className="container py-24">
           <h2 className="font-display text-3xl md:text-4xl text-coffee inline-block relative after:absolute after:left-0 after:-bottom-2 after:h-1 after:w-24 after:bg-gold">
             Gallery
