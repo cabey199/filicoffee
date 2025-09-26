@@ -51,8 +51,8 @@ export default function BackgroundVideo({
       {overlayClassName ? <div className={cn("absolute inset-0 pointer-events-none", overlayClassName)} /> : null}
       {fadeEdges ? (
         <>
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 md:h-32 bg-gradient-to-b from-black/35 to-transparent" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 md:h-32 bg-gradient-to-t from-black/35 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-32 md:h-48 bg-gradient-to-b from-black/40 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 md:h-48 bg-gradient-to-t from-black/40 to-transparent" />
         </>
       ) : null}
     </div>
