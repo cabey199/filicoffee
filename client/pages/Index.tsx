@@ -42,7 +42,7 @@ export default function Index() {
       {
         name: "Aroma Blend",
         desc: "House blend, smooth & rich",
-        img: "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        img: "https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fc39698b6b5864c0c9bae50c566a2e59d?format=webp&width=1200",
       },
     ],
     [],
@@ -50,6 +50,12 @@ export default function Index() {
 
   const gallery = useMemo(
     () => [
+      "https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F5bee3cbdc0154ae7b996c5c6b5421136?format=webp&width=1600",
+      "https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F99d4bd00ffee4e319c401f96ba995829?format=webp&width=1600",
+      "https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fc39698b6b5864c0c9bae50c566a2e59d?format=webp&width=1600",
+      "https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F08be3a5f32a24ba691b4709c0f040752?format=webp&width=1600",
+      "https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F4bc22dca9bcd46f28b0ceee4fb8ce76e?format=webp&width=1600",
+      "https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fc2e505a0d62b42fd97393ac14d682192?format=webp&width=1600",
       "https://images.pexels.com/photos/9754/coffee-beans-coffee-cup-cup.jpg?auto=compress&cs=tinysrgb&w=1600",
       "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "https://images.pexels.com/photos/3670/coffee-red-mug-desk.jpg?auto=compress&cs=tinysrgb&w=1600",
@@ -128,8 +134,8 @@ export default function Index() {
               )}
             >
               <img
-                src="https://images.pexels.com/photos/628902/pexels-photo-628902.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Roastery and Ethiopian coffee ceremony"
+                src="https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F99d4bd00ffee4e319c401f96ba995829?format=webp&width=1600"
+                alt="Fili Coffee roastery interior"
                 className="w-full h-[360px] md:h-[460px] object-cover rounded-2xl shadow-xl"
               />
             </div>
