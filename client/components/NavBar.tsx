@@ -27,8 +27,9 @@ export default function NavBar() {
       )}
     >
       <nav className="container flex items-center justify-between py-4">
-        <a href="#home" className="font-display text-xl tracking-wide text-foreground">
-          <span className="text-gold">Fili</span> Coffee Roasting
+        <a href="#home" className="flex items-center gap-3 text-foreground">
+          <img src="https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fbc479adbfa694305a6c9aa9305a359ed?format=webp&width=200" alt="Fili Coffee logo" className="h-8 w-auto"/>
+          <span className="font-display text-xl tracking-wide"><span className="text-gold">Fili</span> Coffee</span>
         </a>
         <ul className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
