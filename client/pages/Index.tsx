@@ -138,7 +138,11 @@ export default function Index() {
       </section>
 
       {/* Coffee */}
-      <section id="coffee" className="relative scroll-mt-24 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.04),transparent_60%)]">
+      <section id="coffee" className="relative scroll-mt-24 overflow-hidden">
+        <BackgroundVideo
+          src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fc35129a95db8461694ede0f115c94321?alt=media&token=b98aad85-07a5-46d6-9474-b0e64fa89a6a&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
+          overlayClassName="bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.35),transparent_65%)]"
+        />
         <div className="container py-24">
           <h2
             ref={coffeeRef}
