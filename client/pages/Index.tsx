@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
 import { useInView } from "@/hooks/useInView";
+import BackgroundVideo from "@/components/BackgroundVideo";
 
 export default function Index() {
   const [heroReady, setHeroReady] = useState(false);
