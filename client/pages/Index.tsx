@@ -159,7 +159,7 @@ export default function Index() {
             {products.map((p) => (
               <article
                 key={p.name}
-                className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-md transition-all will-change-transform"
+                className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg ring-1 ring-black/5 hover:ring-2 hover:ring-gold/30 transition-transform duration-300 will-change-transform hover:-translate-y-1"
               >
                 <img
                   src={p.img}
