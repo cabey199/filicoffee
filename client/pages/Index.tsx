@@ -107,7 +107,7 @@ export default function Index() {
       </section>
 
       {/* About */}
-      <section id="about" className="relative">
+      <section id="about" className="relative scroll-mt-24">
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-coffee to-beige" />
         <div className="container py-24">
           <div className="grid md:grid-cols-2 gap-10 items-center">
