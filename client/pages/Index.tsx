@@ -71,17 +71,10 @@ export default function Index() {
     <main className="min-h-screen">
       {/* Home */}
       <section id="home" className="relative h-screen w-full">
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg?auto=compress&cs=tinysrgb&w=1600"
-        >
-          <source src="/videos/home-hero.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50" />
+        <BackgroundVideo
+          src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fadbbad204a764387a7626ba5f317afcb?alt=media&token=fb0f550d-511a-4304-96a0-0cd5fe31d549&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
+          overlayClassName="bg-gradient-to-b from-black/55 via-black/30 to-black/60"
+        />
         <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
           <div
             className={cn(
