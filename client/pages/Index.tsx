@@ -143,64 +143,67 @@ export default function Index() {
                 aboutLeftIn ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8",
               )}
             >
-              <h2 className="font-display text-3xl md:text-4xl text-cream uppercase">ABOUT US</h2>
-              <p className="mt-2 text-lg md:text-xl text-cream/95">We are here to deliver quality Ethiopian Coffee</p>
+              <h2 className="font-display text-3xl md:text-4xl text-cream uppercase inline-block relative after:absolute after:left-0 after:-bottom-2 after:h-1.5 after:w-24 after:bg-gold">ABOUT US</h2>
+              <div className="mt-3 flex items-center gap-3 text-lg md:text-xl text-cream/95">
+                <span className="h-1.5 w-8 rounded-full bg-gold" aria-hidden />
+                <span className="font-semibold text-gold">We are here to deliver quality Ethiopian Coffee</span>
+              </div>
               <p className="mt-6 leading-relaxed text-cream/90">
                 Fili Coffee Roasting is established as one of the leading speciality coffee roasters based in Addis Ababa. Fili Coffee Roasting is made up of seasoned professionals who have reach experience in the coffee industry. Our philosophy is driven by a passion for coffee and commitment to source and roast some of the highest quality Ethiopian coffee package the very pure Arabica coffee from different regions of Ethiopia. We produce in our rostery plant with different packaging size and speciality grades. We deliver quality roasted coffee for coffee shops, bistros, restaurants and cafes. Now you can explore the best Ethiopian coffee through the experience of a professional roastmaster.
               </p>
 
-              <div className="mt-8">
-                <h3 className="font-display text-2xl text-cream">What we serve you</h3>
+              <div className="mt-8 pt-6 border-t border-white/10">
+                <h3 className="font-display text-2xl text-cream inline-block relative after:absolute after:left-0 after:-bottom-1.5 after:h-1 after:w-16 after:bg-gold">What we serve you</h3>
                 <p className="mt-2 text-cream/90">The main products we serve at our cafes.</p>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
-                    <h4 className="text-cream font-semibold">Coffee</h4>
+                  <div className="group rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-5 hover:ring-gold/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-zoomIn">
+                    <h4 className="text-cream font-semibold flex items-center gap-2"><span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">☕</span><span>Coffee</span></h4>
                     <p className="text-cream/90">Brewed in ethiopian traditional method "Yejebena Buna"</p>
                   </div>
-                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
-                    <h4 className="text-cream font-semibold">Macchiato</h4>
+                  <div className="group rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-5 hover:ring-gold/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-zoomIn">
+                    <h4 className="text-cream font-semibold flex items-center gap-2"><span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">🥛</span><span>Macchiato</span></h4>
                     <p className="text-cream/90">An espresso with a small amount of foamed milk on top</p>
                   </div>
-                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4 sm:col-span-2">
-                    <h4 className="text-cream font-semibold">Espresso</h4>
+                  <div className="group rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-5 sm:col-span-2 hover:ring-gold/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-zoomIn">
+                    <h4 className="text-cream font-semibold flex items-center gap-2"><span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">⚡</span><span>Espresso</span></h4>
                     <p className="text-cream/90">Syrupy mouthfeel; chocolate-toned finish with pleasing floral &amp; nut tones</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-10">
-                <h3 className="font-display text-2xl text-cream">Our signature coffee roasts</h3>
+              <div className="mt-10 pt-6 border-t border-white/10">
+                <h3 className="font-display text-2xl text-cream inline-block relative after:absolute after:left-0 after:-bottom-1.5 after:h-1 after:w-16 after:bg-gold">Our signature coffee roasts</h3>
                 <p className="mt-2 text-cream/90">We have three roasting levels</p>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
-                    <h4 className="text-cream font-semibold">Light Roasted</h4>
+                  <div className="group rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-5 hover:ring-gold/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-zoomIn">
+                    <h4 className="text-cream font-semibold flex items-center gap-2"><span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">🌼</span><span>Light Roasted</span></h4>
                     <p className="text-cream/90">You'll be able to taste full body, some floral notes, bright wine acidity, earthy and mossy.</p>
                   </div>
-                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
-                    <h4 className="text-cream font-semibold">Medium Roasted</h4>
+                  <div className="group rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-5 hover:ring-gold/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-zoomIn">
+                    <h4 className="text-cream font-semibold flex items-center gap-2"><span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">🍊</span><span>Medium Roasted</span></h4>
                     <p className="text-cream/90">This roast level often brings out lots of possible flavors: citrus, fruit, berry, acidity.</p>
                   </div>
-                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4 sm:col-span-2">
-                    <h4 className="text-cream font-semibold">Medium Dark Roasted</h4>
+                  <div className="group rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-5 sm:col-span-2 hover:ring-gold/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-zoomIn">
+                    <h4 className="text-cream font-semibold flex items-center gap-2"><span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">🍫</span><span>Medium Dark Roasted</span></h4>
                     <p className="text-cream/90">This tastes chocolatey darkness, and a bit of floral, berry, fruit, citrus.</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-10">
-                <h3 className="font-display text-2xl text-cream">What Ethiopia serves you</h3>
+              <div className="mt-10 pt-6 border-t border-white/10">
+                <h3 className="font-display text-2xl text-cream inline-block relative after:absolute after:left-0 after:-bottom-1.5 after:h-1 after:w-16 after:bg-gold">What Ethiopia serves you</h3>
                 <p className="mt-2 text-cream/90">World’s best reviewed single origin premium coffee beans</p>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
-                    <h4 className="text-cream font-semibold">Sidamo</h4>
+                  <div className="group rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-5 hover:ring-gold/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-zoomIn">
+                    <h4 className="text-cream font-semibold flex items-center gap-2"><span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">🗺️</span><span>Sidamo</span></h4>
                     <p className="text-cream/90">best known for its rich, mouthfeel, sweet and complex flavor, low acidity, floral aroma, and a finish that is bright and soft.</p>
                   </div>
-                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
-                    <h4 className="text-cream font-semibold">Yirgacheffee</h4>
+                  <div className="group rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-5 hover:ring-gold/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-zoomIn">
+                    <h4 className="text-cream font-semibold flex items-center gap-2"><span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">🍋</span><span>Yirgacheffee</span></h4>
                     <p className="text-cream/90">shimmer with citrus tones combined with a wonderful sweetness in the taste and floral notes in the aroma.</p>
                   </div>
-                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4 sm:col-span-2">
-                    <h4 className="text-cream font-semibold">Harar</h4>
+                  <div className="group rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-5 sm:col-span-2 hover:ring-gold/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-zoomIn">
+                    <h4 className="text-cream font-semibold flex items-center gap-2"><span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">🍇</span><span>Harar</span></h4>
                     <p className="text-cream/90">winey and fruity, floral-toned acidity with a rich &amp; pungent taste, heady aroma that is reminiscent of blackberries.</p>
                   </div>
                 </div>
@@ -213,7 +216,7 @@ export default function Index() {
                 aboutRightIn ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8",
               )}
             >
-              <div className="relative w-full h-[360px] md:h-[460px] rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/10">
+              <div className="relative w-full h-[360px] md:h-[460px] rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/20 transition-shadow hover:ring-gold/30 hover:shadow-2xl">
                 <video
                   ref={aboutVideoRef}
                   src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F6ddb2ef00e9e42df90091b99198440b1?alt=media&token=ac6ddb7b-9acb-430c-a68d-dca611d425e2&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
