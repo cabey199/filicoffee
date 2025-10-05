@@ -228,40 +228,52 @@ export default function Index() {
                 </p>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2">
                   <div className="group rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-5 hover:ring-gold/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-zoomIn">
-                    <h4 className="text-cream font-semibold flex items-center gap-2">
-                      <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">
-                        🌼
-                      </span>
-                      <span>Light Roasted</span>
-                    </h4>
-                    <p className="text-cream/90">
-                      You'll be able to taste full body, some floral notes,
-                      bright wine acidity, earthy and mossy.
-                    </p>
+                    <div className="flex items-center gap-4">
+                      <div className="flex-1">
+                        <h4 className="text-cream font-semibold flex items-center gap-2">
+                          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">🌼</span>
+                          <span>Light Roasted</span>
+                        </h4>
+                        <p className="text-cream/90">You'll be able to taste full body, some floral notes, bright wine acidity, earthy and mossy.</p>
+                      </div>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F1d8113e0c1664f36aaf13f7866b218c8?format=webp&width=800"
+                        alt="Light roast pack"
+                        className="h-24 w-20 md:h-28 md:w-24 object-contain rounded-md ring-1 ring-white/10 group-hover:ring-gold/30 shadow-sm transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
                   </div>
                   <div className="group rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-5 hover:ring-gold/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-zoomIn">
-                    <h4 className="text-cream font-semibold flex items-center gap-2">
-                      <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">
-                        🍊
-                      </span>
-                      <span>Medium Roasted</span>
-                    </h4>
-                    <p className="text-cream/90">
-                      This roast level often brings out lots of possible
-                      flavors: citrus, fruit, berry, acidity.
-                    </p>
+                    <div className="flex items-center gap-4">
+                      <div className="flex-1">
+                        <h4 className="text-cream font-semibold flex items-center gap-2">
+                          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">🍊</span>
+                          <span>Medium Roasted</span>
+                        </h4>
+                        <p className="text-cream/90">This roast level often brings out lots of possible flavors: citrus, fruit, berry, acidity.</p>
+                      </div>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F8aa582b382db43f09baabde71490667a?format=webp&width=800"
+                        alt="Medium roast pack"
+                        className="h-24 w-20 md:h-28 md:w-24 object-contain rounded-md ring-1 ring-white/10 group-hover:ring-gold/30 shadow-sm transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
                   </div>
                   <div className="group rounded-xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-5 sm:col-span-2 hover:ring-gold/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-zoomIn">
-                    <h4 className="text-cream font-semibold flex items-center gap-2">
-                      <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">
-                        🍫
-                      </span>
-                      <span>Medium Dark Roasted</span>
-                    </h4>
-                    <p className="text-cream/90">
-                      This tastes chocolatey darkness, and a bit of floral,
-                      berry, fruit, citrus.
-                    </p>
+                    <div className="flex items-center gap-4">
+                      <div className="flex-1">
+                        <h4 className="text-cream font-semibold flex items-center gap-2">
+                          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 text-gold">🍫</span>
+                          <span>Medium Dark Roasted</span>
+                        </h4>
+                        <p className="text-cream/90">This tastes chocolatey darkness, and a bit of floral, berry, fruit, citrus.</p>
+                      </div>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F044fb3dd7c434883ac98b1e6865b42ea?format=webp&width=800"
+                        alt="Medium dark roast pack"
+                        className="h-24 w-20 md:h-28 md:w-24 object-contain rounded-md ring-1 ring-white/10 group-hover:ring-gold/30 shadow-sm transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
