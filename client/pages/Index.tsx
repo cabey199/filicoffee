@@ -143,10 +143,68 @@ export default function Index() {
                 aboutLeftIn ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8",
               )}
             >
-              <h2 className="font-display text-3xl md:text-4xl text-cream">About Us</h2>
+              <h2 className="font-display text-3xl md:text-4xl text-cream uppercase">ABOUT US</h2>
+              <p className="mt-2 text-lg md:text-xl text-cream/95">We are here to deliver quality Ethiopian Coffee</p>
               <p className="mt-6 leading-relaxed text-cream/90">
-                Fili Coffee Roasting is one of Ethiopia’s leading specialty coffee roasters. With years of expertise, we roast the purest Arabica beans from regions across Ethiopia. Driven by passion, we bring the homely essence of Ethiopian coffee culture into every cup.
+                Fili Coffee Roasting is established as one of the leading speciality coffee roasters based in Addis Ababa. Fili Coffee Roasting is made up of seasoned professionals who have reach experience in the coffee industry. Our philosophy is driven by a passion for coffee and commitment to source and roast some of the highest quality Ethiopian coffee package the very pure Arabica coffee from different regions of Ethiopia. We produce in our rostery plant with different packaging size and speciality grades. We deliver quality roasted coffee for coffee shops, bistros, restaurants and cafes. Now you can explore the best Ethiopian coffee through the experience of a professional roastmaster.
               </p>
+
+              <div className="mt-8">
+                <h3 className="font-display text-2xl text-cream">What we serve you</h3>
+                <p className="mt-2 text-cream/90">The main products we serve at our cafes.</p>
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
+                    <h4 className="text-cream font-semibold">Coffee</h4>
+                    <p className="text-cream/90">Brewed in ethiopian traditional method "Yejebena Buna"</p>
+                  </div>
+                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
+                    <h4 className="text-cream font-semibold">Macchiato</h4>
+                    <p className="text-cream/90">An espresso with a small amount of foamed milk on top</p>
+                  </div>
+                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4 sm:col-span-2">
+                    <h4 className="text-cream font-semibold">Espresso</h4>
+                    <p className="text-cream/90">Syrupy mouthfeel; chocolate-toned finish with pleasing floral &amp; nut tones</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-10">
+                <h3 className="font-display text-2xl text-cream">Our signature coffee roasts</h3>
+                <p className="mt-2 text-cream/90">We have three roasting levels</p>
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
+                    <h4 className="text-cream font-semibold">Light Roasted</h4>
+                    <p className="text-cream/90">You'll be able to taste full body, some floral notes, bright wine acidity, earthy and mossy.</p>
+                  </div>
+                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
+                    <h4 className="text-cream font-semibold">Medium Roasted</h4>
+                    <p className="text-cream/90">This roast level often brings out lots of possible flavors: citrus, fruit, berry, acidity.</p>
+                  </div>
+                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4 sm:col-span-2">
+                    <h4 className="text-cream font-semibold">Medium Dark Roasted</h4>
+                    <p className="text-cream/90">This tastes chocolatey darkness, and a bit of floral, berry, fruit, citrus.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-10">
+                <h3 className="font-display text-2xl text-cream">What Ethiopia serves you</h3>
+                <p className="mt-2 text-cream/90">World’s best reviewed single origin premium coffee beans</p>
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
+                    <h4 className="text-cream font-semibold">Sidamo</h4>
+                    <p className="text-cream/90">best known for its rich, mouthfeel, sweet and complex flavor, low acidity, floral aroma, and a finish that is bright and soft.</p>
+                  </div>
+                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
+                    <h4 className="text-cream font-semibold">Yirgacheffee</h4>
+                    <p className="text-cream/90">shimmer with citrus tones combined with a wonderful sweetness in the taste and floral notes in the aroma.</p>
+                  </div>
+                  <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4 sm:col-span-2">
+                    <h4 className="text-cream font-semibold">Harar</h4>
+                    <p className="text-cream/90">winey and fruity, floral-toned acidity with a rich &amp; pungent taste, heady aroma that is reminiscent of blackberries.</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               ref={aboutRightRef}
