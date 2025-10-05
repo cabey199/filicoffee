@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { useInView } from "@/hooks/useInView";
 import BackgroundVideo from "@/components/BackgroundVideo";
@@ -73,6 +73,21 @@ export default function Index() {
   const { ref: aboutRightRef, inView: aboutRightIn } = useInView<HTMLDivElement>();
   const { ref: coffeeRef, inView: coffeeIn } = useInView<HTMLHeadingElement>();
 
+  const aboutVideoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => {
+    const el = aboutVideoRef.current;
+    if (!el) return;
+    const apply = () => {
+      try {
+        el.playbackRate = 0.85;
+        (el as any).defaultPlaybackRate = 0.85;
+      } catch {}
+    };
+    apply();
+    el.addEventListener("loadedmetadata", apply, { once: true });
+    return () => el.removeEventListener("loadedmetadata", apply);
+  }, []);
+
   return (
     <main className="min-h-screen">
       {/* Home */}
@@ -140,11 +155,18 @@ export default function Index() {
                 aboutRightIn ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8",
               )}
             >
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F99d4bd00ffee4e319c401f96ba995829?format=webp&width=1600"
-                alt="Fili Coffee roastery interior"
-                className="w-full h-[360px] md:h-[460px] object-cover rounded-2xl shadow-xl"
-              />
+              <div className="relative w-full h-[360px] md:h-[460px] rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/10">
+                <video
+                  ref={aboutVideoRef}
+                  src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F6ddb2ef00e9e42df90091b99198440b1?alt=media&token=ac6ddb7b-9acb-430c-a68d-dca611d425e2&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
+                  className="absolute inset-0 h-full w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent" />
+              </div>
             </div>
           </div>
         </div>
