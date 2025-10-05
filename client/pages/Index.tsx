@@ -128,7 +128,7 @@ export default function Index() {
       </section>
 
       {/* About */}
-      <section id="about" className="relative scroll-mt-24 overflow-hidden">
+      <section id="about" aria-labelledby="about-heading" className="relative scroll-mt-24 overflow-hidden">
         <BackgroundVideo
           src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F6ddb2ef00e9e42df90091b99198440b1?alt=media&token=ac6ddb7b-9acb-430c-a68d-dca611d425e2&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
           overlayClassName="bg-gradient-to-r from-coffee/90 to-beige/60"
@@ -140,17 +140,17 @@ export default function Index() {
           className="pointer-events-none select-none absolute inset-0 mx-auto my-auto opacity-10 mix-blend-screen w-[320px] md:w-[420px]"
         />
         <div className="container py-24">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 xl:gap-24 items-start">
             <div
               ref={aboutLeftRef}
               className={cn(
-                "text-cream/95 md:pr-8 transition-all duration-700",
+                "text-cream/95 md:pr-8 lg:pr-12 xl:pr-16 max-w-prose transition-all duration-700",
                 aboutLeftIn
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 -translate-x-8",
               )}
             >
-              <h2 className="font-display text-3xl md:text-4xl text-cream uppercase inline-block relative after:absolute after:left-0 after:-bottom-2 after:h-1.5 after:w-24 after:bg-gold">
+              <h2 id="about-heading" className="font-display text-3xl md:text-4xl text-cream uppercase inline-block relative after:absolute after:left-0 after:-bottom-2 after:h-1.5 after:w-24 after:bg-gold">
                 ABOUT US
               </h2>
               <div className="mt-3 flex items-center gap-3 text-lg md:text-xl text-cream/95">
@@ -238,7 +238,7 @@ export default function Index() {
                       </div>
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F1d8113e0c1664f36aaf13f7866b218c8?format=webp&width=800"
-                        alt="Light roast pack"
+                        alt="Light roast pack" loading="lazy" decoding="async"
                         className="h-24 w-20 md:h-28 md:w-24 object-contain rounded-md ring-1 ring-white/10 group-hover:ring-gold/30 shadow-sm transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
@@ -254,7 +254,7 @@ export default function Index() {
                       </div>
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F8aa582b382db43f09baabde71490667a?format=webp&width=800"
-                        alt="Medium roast pack"
+                        alt="Medium roast pack" loading="lazy" decoding="async"
                         className="h-24 w-20 md:h-28 md:w-24 object-contain rounded-md ring-1 ring-white/10 group-hover:ring-gold/30 shadow-sm transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
@@ -270,7 +270,7 @@ export default function Index() {
                       </div>
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F044fb3dd7c434883ac98b1e6865b42ea?format=webp&width=800"
-                        alt="Medium dark roast pack"
+                        alt="Medium dark roast pack" loading="lazy" decoding="async"
                         className="h-24 w-20 md:h-28 md:w-24 object-contain rounded-md ring-1 ring-white/10 group-hover:ring-gold/30 shadow-sm transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
@@ -330,17 +330,17 @@ export default function Index() {
             <div
               ref={aboutRightRef}
               className={cn(
-                "transition-all duration-700",
+                "transition-all duration-700 lg:sticky lg:top-24 lg:self-start",
                 aboutRightIn
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-x-8",
               )}
             >
-              <div className="relative w-full h-[360px] md:h-[460px] rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/20 transition-shadow hover:ring-gold/30 hover:shadow-2xl">
+              <div className="relative w-full h-[380px] md:h-[520px] lg:h-[560px] rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/20 transition-shadow hover:ring-gold/30 hover:shadow-2xl">
                 <video
                   ref={aboutVideoRef}
                   src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F6ddb2ef00e9e42df90091b99198440b1?alt=media&token=ac6ddb7b-9acb-430c-a68d-dca611d425e2&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover" title="Fili Coffee roastery video"
                   autoPlay
                   muted
                   loop
