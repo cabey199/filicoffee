@@ -158,17 +158,16 @@ export default function Shop() {
                 <div className="text-sm text-foreground/70">Total</div>
                 <div className="text-2xl font-semibold text-gold">ETB {price.toLocaleString()}</div>
               </div>
-              <button
-                type="button"
-                disabled={!canAdd}
+              <a
+                href="#order"
                 className={cn(
                   "inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold shadow-sm transition-all",
-                  canAdd ? "bg-gold text-coffee hover:shadow-md active:scale-95" : "bg-muted text-foreground/50 cursor-not-allowed"
+                  canAdd ? "bg-gold text-coffee hover:shadow-md active:scale-95" : "bg-muted text-foreground/50 cursor-not-allowed pointer-events-none"
                 )}
                 aria-disabled={!canAdd}
               >
-                Add to Cart
-              </button>
+                Order Now
+              </a>
             </div>
           </div>
         </div>
@@ -191,17 +190,16 @@ export default function Shop() {
                 <span className="px-4">{qty}</span>
                 <button type="button" onClick={() => setQty((q) => q + 1)} className="px-3 py-2 text-lg hover:bg-white" aria-label="Increase quantity">+</button>
               </div>
-              <button
-                type="button"
-                disabled={!canAdd}
+              <a
+                href="#order"
                 className={cn(
                   "inline-flex items-center justify-center rounded-full px-5 py-3 font-semibold shadow-sm transition-all",
-                  canAdd ? "bg-gold text-coffee hover:shadow-md active:scale-95" : "bg-muted text-foreground/50 cursor-not-allowed"
+                  canAdd ? "bg-gold text-coffee hover:shadow-md active:scale-95" : "bg-muted text-foreground/50 cursor-not-allowed pointer-events-none"
                 )}
                 aria-disabled={!canAdd}
               >
-                Add to Cart
-              </button>
+                Order Now
+              </a>
             </div>
           </div>
         </div>
