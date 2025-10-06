@@ -70,7 +70,7 @@ export default function Shop() {
     <main className="min-h-screen bg-background">
       <section className="relative pt-28 pb-16 md:pb-24">
         <BackgroundVideo
-          src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fc35129a95db8461694ede0f115c94321?alt=media&token=b98aad85-07a5-46d6-9474-b0e64fa89a6a&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
+          src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F0ab0b8ea5c3f4028912074ca9dfab2c8?alt=media&token=260fcb14-4851-4c76-a931-5b80671dd89d&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
           overlayClassName="bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.45),transparent_65%)]"
           playbackRate={0.85}
         />
