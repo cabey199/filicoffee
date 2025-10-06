@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState, useRef } from "react";
 import { cn } from "@/lib/utils";
-import BackgroundVideo from "@/components/BackgroundVideo";
 
 type RoastLevel = "Light" | "Medium" | "Medium Dark";
 type CoffeeType = "Beans" | "Powder";
@@ -68,11 +67,13 @@ export default function Shop() {
 
   return (
     <main className="min-h-screen bg-background">
-      <section className="relative pt-28 pb-16 md:pb-24">
-        <BackgroundVideo
-          src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2F0ab0b8ea5c3f4028912074ca9dfab2c8?alt=media&token=260fcb14-4851-4c76-a931-5b80671dd89d&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
-          overlayClassName="bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.45),transparent_65%)]"
-          playbackRate={0.85}
+      <section className="relative overflow-hidden pt-28 pb-16 md:pb-24 bg-coffee">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-coffee via-coffee/95 to-coffee/85" />
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fbc479adbfa694305a6c9aa9305a359ed?format=webp&width=800"
+          alt=""
+          aria-hidden
+          className="pointer-events-none select-none absolute inset-0 mx-auto my-auto opacity-10 mix-blend-screen w-[320px] md:w-[420px]"
         />
         <div className="container">
           <nav className="mb-8 md:mb-10 flex flex-wrap gap-3 text-sm">
