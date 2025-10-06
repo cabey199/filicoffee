@@ -7,6 +7,7 @@ const navItems = [
   { label: "Coffee", href: "#coffee" },
   { label: "Events", href: "#events" },
   { label: "Gallery", href: "#gallery" },
+  { label: "Shop", href: "/shop" },
 ];
 
 export default function NavBar() {
@@ -47,10 +48,10 @@ export default function NavBar() {
           ))}
         </ul>
         <a
-          href="#coffee"
+          href="/shop"
           className="hidden md:inline-flex items-center justify-center rounded-full bg-gold text-coffee px-4 py-2 text-sm font-semibold shadow-sm hover:shadow-md transition-transform active:scale-95"
         >
-          Explore Our Coffee
+          Shop Now
         </a>
       </nav>
     </header>

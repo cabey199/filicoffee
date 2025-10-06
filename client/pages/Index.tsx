@@ -117,10 +117,10 @@ export default function Index() {
             </p>
             <div className="mt-8">
               <a
-                href="#coffee"
+                href="/shop"
                 className="inline-flex items-center justify-center rounded-full bg-gold text-coffee px-6 py-3 font-semibold shadow-sm hover:shadow-md transition-transform active:scale-95"
               >
-                Explore Our Coffee
+                Shop Now
               </a>
             </div>
           </div>
