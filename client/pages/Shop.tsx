@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import { cn } from "@/lib/utils";
+import BackgroundVideo from "@/components/BackgroundVideo";
 
 type RoastLevel = "Light" | "Medium" | "Medium Dark";
 type CoffeeType = "Beans" | "Powder";
@@ -32,10 +33,60 @@ export default function Shop() {
 
   const canAdd = Boolean(size && qty > 0);
 
+  const nameRef = useRef<HTMLInputElement | null>(null);
+  const phoneRef = useRef<HTMLInputElement | null>(null);
+  const emailRef = useRef<HTMLInputElement | null>(null);
+  const notesRef = useRef<HTMLTextAreaElement | null>(null);
+
+  const composeSummary = () => {
+    return `Order Summary\nType: ${type}\nRoast: ${roast}\nSize: ${size ? `${size} g` : "Not selected"}\nQty: ${qty}\nTotal: ETB ${price.toLocaleString()}\nName: ${nameRef.current?.value || ""}\nPhone: ${phoneRef.current?.value || ""}\nEmail: ${emailRef.current?.value || ""}\nNotes: ${notesRef.current?.value || ""}`;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const params = new URLSearchParams({
+      type,
+      roast,
+      size: size ? String(size) : "",
+      qty: String(qty),
+      total: String(price),
+      name: nameRef.current?.value || "",
+      phone: phoneRef.current?.value || "",
+      email: emailRef.current?.value || "",
+      notes: notesRef.current?.value || "",
+    });
+    const tally = new URLSearchParams(window.location.search).get("tally");
+    if (tally) {
+      const url = `${tally}${tally.includes("?") ? "&" : "?"}${params.toString()}`;
+      window.open(url, "_blank");
+    } else {
+      const summary = composeSummary();
+      navigator.clipboard?.writeText(summary).catch(() => {});
+      alert("Order summary copied. Add ?tally=YOUR_TALLY_FORM_URL to prefill a Tally form.");
+    }
+  };
+
   return (
     <main className="min-h-screen bg-background">
       <section className="relative pt-28 pb-16 md:pb-24">
-        <div className="container grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <BackgroundVideo
+          src="https://cdn.builder.io/o/assets%2F7295d6a03e5244e6951bcbaefaa83fce%2Fc35129a95db8461694ede0f115c94321?alt=media&token=b98aad85-07a5-46d6-9474-b0e64fa89a6a&apiKey=7295d6a03e5244e6951bcbaefaa83fce"
+          overlayClassName="bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.45),transparent_65%)]"
+          playbackRate={0.85}
+        />
+        <div className="container">
+          <nav className="mb-8 md:mb-10 flex flex-wrap gap-3 text-sm">
+            {[
+              { id: "type", label: "Type" },
+              { id: "roast", label: "Roast" },
+              { id: "size", label: "Size" },
+              { id: "quantity", label: "Quantity" },
+              { id: "order", label: "Order" },
+            ].map((l) => (
+              <a key={l.id} href={`#${l.id}`} className="rounded-full bg-white/20 ring-1 ring-white/30 px-3 py-1.5 text-cream hover:bg-white/30 transition-colors">{l.label}</a>
+            ))}
+          </nav>
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Preview */}
           <div className="order-2 lg:order-1">
             <div className="relative rounded-2xl overflow-hidden ring-1 ring-border/60 shadow-xl bg-gradient-to-b from-beige/40 to-cream">
@@ -53,11 +104,11 @@ export default function Shop() {
 
           {/* Configurator */}
           <div className="order-1 lg:order-2">
-            <h1 className="font-display text-3xl md:text-4xl text-foreground inline-block relative after:absolute after:left-0 after:-bottom-2 after:h-1 after:w-24 after:bg-gold">Single Origin Coffee</h1>
-            <p className="mt-4 text-foreground/80 max-w-prose">Configure your coffee: choose type, roast level, size, and quantity. Enjoy freshly roasted Ethiopian Arabica.</p>
+            <h1 className="font-display text-3xl md:text-4xl text-cream inline-block relative after:absolute after:left-0 after:-bottom-2 after:h-1 after:w-24 after:bg-gold">Single Origin Coffee</h1>
+            <p className="mt-4 text-cream/90 max-w-prose">Configure your coffee: choose type, roast level, size, and quantity. Enjoy freshly roasted Ethiopian Arabica.</p>
 
             {/* Type */}
-            <div className="mt-8">
+            <div id="type" className="mt-8 scroll-mt-28">
               <h2 className="text-sm font-semibold text-foreground/80">Type</h2>
               <div className="mt-3 inline-flex rounded-full bg-white/50 ring-1 ring-border shadow-sm overflow-hidden">
                 {["Beans", "Powder"].map((t) => (
@@ -78,7 +129,7 @@ export default function Shop() {
             </div>
 
             {/* Roast */}
-            <div className="mt-8">
+            <div id="roast" className="mt-8 scroll-mt-28">
               <h2 className="text-sm font-semibold text-foreground/80">Roast</h2>
               <div className="mt-3 flex flex-wrap gap-2">
                 {(["Light", "Medium", "Medium Dark"] as RoastLevel[]).map((r) => (
@@ -111,7 +162,7 @@ export default function Shop() {
             </div>
 
             {/* Size */}
-            <div className="mt-8">
+            <div id="size" className="mt-8 scroll-mt-28">
               <h2 className="text-sm font-semibold text-foreground/80">Size</h2>
               <div className="mt-3 grid grid-cols-3 gap-3">
                 {(Object.keys(SIZE_PRICES) as Array<unknown> as Size[]).map((s) => (
@@ -136,7 +187,7 @@ export default function Shop() {
             </div>
 
             {/* Quantity */}
-            <div className="mt-8">
+            <div id="quantity" className="mt-8 scroll-mt-28">
               <h2 className="text-sm font-semibold text-foreground/80">Quantity</h2>
               <div className="mt-3 inline-flex items-center rounded-full ring-1 ring-border overflow-hidden bg-white/60">
                 <button type="button" onClick={() => setQty((q) => Math.max(1, q - 1))} className="px-4 py-2 text-lg hover:bg-white" aria-label="Decrease quantity">−</button>
@@ -170,6 +221,42 @@ export default function Shop() {
               </a>
             </div>
           </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Order form */}
+      <section id="order" className="relative py-16">
+        <div className="container">
+          <h2 className="font-display text-2xl md:text-3xl text-foreground inline-block relative after:absolute after:left-0 after:-bottom-2 after:h-1 after:w-20 after:bg-gold">Order</h2>
+          <p className="mt-3 text-foreground/80">Fill your details below. Append ?tally=YOUR_TALLY_FORM_URL to this page URL to submit into Tally with selections prefilled.</p>
+          <form onSubmit={handleSubmit} className="mt-8 grid gap-6 max-w-xl">
+            <div>
+              <label className="text-sm font-medium">Name</label>
+              <input ref={nameRef} type="text" required className="mt-2 w-full rounded-md border border-border bg-background px-3 py-2" />
+            </div>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label className="text-sm font-medium">Phone</label>
+                <input ref={phoneRef} type="tel" required className="mt-2 w-full rounded-md border border-border bg-background px-3 py-2" />
+              </div>
+              <div>
+                <label className="text-sm font-medium">Email</label>
+                <input ref={emailRef} type="email" className="mt-2 w-full rounded-md border border-border bg-background px-3 py-2" />
+              </div>
+            </div>
+            <div>
+              <label className="text-sm font-medium">Notes</label>
+              <textarea ref={notesRef} rows={4} className="mt-2 w-full rounded-md border border-border bg-background px-3 py-2" />
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="hidden sm:block">
+                <div className="text-sm text-foreground/70">Summary</div>
+                <pre className="text-foreground/90 text-sm whitespace-pre-wrap max-w-md">{composeSummary()}</pre>
+              </div>
+              <button type="submit" className="rounded-full bg-gold text-coffee px-6 py-3 font-semibold shadow-sm hover:shadow-md active:scale-95">Submit</button>
+            </div>
+          </form>
         </div>
       </section>
 
